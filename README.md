@@ -1,60 +1,44 @@
-# angular-spring-blog
 
-## 1 - Description:
-- Blog made in Java and Spring Framework, with Angular 6 on front-End, and Hibernate with PostgreSQL database.
+# Angular-Spring-Blog  
+![Programming Language](https://img.shields.io/badge/JavaScript-yellow?logo=javascript&logoColor=white) ![Programming Language](https://img.shields.io/badge/Java-red?style=flat&logo=openjdk&logoColor=white)
+![Framework](https://img.shields.io/badge/Angular-red?style=flat&logo=angular&logoColor=white) ![Framework](https://img.shields.io/badge/Spring%20Framework-green?style=flat&logo=spring&logoColor=white)  ![Framework](https://img.shields.io/badge/Bootstrap-purple?style=flat&logo=bootstrap&logoColor=white)      
+![Database](https://img.shields.io/badge/PostgreSQL-darkblue?logo=postgresql&logoColor=white) ![ORM](https://img.shields.io/badge/Hibernate-beige?logo=hibernate&logoColor=white)  
+![Platform: Web](https://img.shields.io/badge/Platform-Web-blue?logo=google-chrome)  
+![Last Commit](https://img.shields.io/github/last-commit/ander1code/angular-spring-blog?color=yellow&logo=github) ![Size](https://img.shields.io/github/repo-size/ander1code/angular-spring-blog?color=blue&logo=files) ![License](https://img.shields.io/github/license/ander1code/angular-spring-blog?color=black&logo=open-source-initiative)  
+  
 
-## 2 - Features:
-- Each post is created, edited and deleted by an author.
-- Author can not delete or edit post from another author (user).
-- Paged posts.
+---
 
-## 3 - Parts:
+## 1 - Overview
+A blog application built with **Java** and the **Spring Framework** for the back-end, complemented by **Angular 6** for the front-end. It leverages the **'Clean Blog'** template from the Bootstrap framework for its design and employs **Hibernate** to manage interactions with a **PostgreSQL** database.
 
-### 3.1 - Interface ("blog-angular-java" folder):
-- Interface made in Angular 6, with the CleanBlog template. CleanBlog is a template made in Bootstrap 3.3.7.
-Link: https://startbootstrap.com/template-overviews/clean-blog/
+## 2 - Features
+- Authors can create, edit, and delete their own posts.
+- Posts created by one author cannot be edited or deleted by other authors (users).
+- Displays posts in a paginated format for seamless navigation.
 
-### 3.2 - API ("spring-blog" folder):
-- API made in JAVA with Spring Framework. It returns data in JSON for the interface.
+## 3 - Application Structure
 
-## 4 - Tools:
+### 3.1 - Front-End (`blog-angular-java` folder)
+The user interface, crafted with **Angular 6**, incorporates the **Clean Blog** template, a Bootstrap-based design.  
+**Template source:** [Clean Blog on Start Bootstrap](https://startbootstrap.com/template-overviews/clean-blog/)
 
-### 4.1 - Interface:
-- Interface made in Angular 6, with the CleanBlog template. CleanBlog is a template made in Bootstrap 3.3.7.
-Link: https://startbootstrap.com/template-overviews/clean-blog/
+### 3.2 - Back-End (`spring-blog` folder)
+The back-end is implemented using **Java** and the **Spring Framework**, designed to serve **JSON-formatted data** for front-end consumption.
 
-#### 4.1.1 - Angular:
-- Angular 6.1.0
+## 4 - Tools & Dependencies
 
-##### 4.1.1.1 - Pagination:
-- ngx-pagination: 3.2.1
+### 4.1 - Front-End Tools
+- **Framework**: Angular 6.1.0  
+- **Template**: Clean Blog (Bootstrap 3.3.7)  
+  **Source**: [Clean Blog](https://startbootstrap.com/template-overviews/clean-blog)
 
-### 4.2 - API:
+#### 4.1.1 - Pagination
+- **Library**: ngx-pagination (version 3.2.1)
 
-#### 4.2.1 - Java's version:
+### 4.2 - Back-End Tools
+
+#### 4.2.1 - Java Version
 - Java 1.8 (jdk1.8.0_181)
 
-#### 4.2.2 - Web Framework:
-- Spring Framework 4.0.1.RELEASE
-
-#### 4.2.3 - ORM Framework:
-- Hibernate 4.3.1.Final
-
-#### 4.2.4 - Dependences:
-
-##### 4.2.4.1 - Conversion to Json:
-- Gson 2.8.2
-
-##### 4.2.4.2 - Upload File:
-- commons-fileupload
-- commons-io
-- commons-codec
-
-## 5 - Database:
-
-### 5.1 - PostgreSQL Driver Version:
-- Driver for PostgreSQL (9.4.1209.jre7)
-
-## 6 - IDE:
-### 6.1 - NetBeans Version:
-- NetBeans 8.2
+---
