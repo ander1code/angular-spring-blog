@@ -21,6 +21,7 @@
             30
         </session-timeout>
     </session-config>
+    <!-- 
     <welcome-file-list>
         <welcome-file>redirect.jsp</welcome-file>
     </welcome-file-list>
@@ -31,5 +32,5 @@
     <error-page>
         <error-code>500</error-code>
         <location>/errors/500</location>
-    </error-page>
+    </error-page> -->
 </web-app>

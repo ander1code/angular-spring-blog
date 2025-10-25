@@ -26,6 +26,8 @@
     
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
     
+    <mvc:resources mapping="/pictures/**" location="/pictures/" />
+    
     <mvc:interceptors>
         <bean class="com.springblog.services.security.AuthorizerInterceptor" />
     </mvc:interceptors>

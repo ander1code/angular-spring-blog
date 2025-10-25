@@ -2,8 +2,10 @@ package com.springblog.models;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -37,14 +39,13 @@ public class Post implements Serializable {
     @Column(name = "TEXT", length = 10485760, nullable = false)
     private String text;
 
-    @Lob
-    @Column(name = "PICTURE", nullable = true)
-    private byte[] picture;
-    
+    @Column(name = "PICTURE", length = 255, nullable = false)
+    private String picture;
+
     @Column(name = "DATEPOST", nullable = false)
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date datepost;
-    
+
     @Column(name = "DATEUPDATE", nullable = true)
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date dateupdate;
@@ -53,7 +54,7 @@ public class Post implements Serializable {
     @JoinColumn(name = "AUTHOR_ID")
     private Author author;
 
-    public Post(int id, String title, String briefing, String text, byte[] picture, Date datepost, Date dateupdate, Author author) {
+    public Post(int id, String title, String briefing, String text, String picture, Date datepost, Date dateupdate, Author author) {
         this.id = id;
         this.title = title;
         this.briefing = briefing;
@@ -63,8 +64,8 @@ public class Post implements Serializable {
         this.dateupdate = dateupdate;
         this.author = author;
     }
-    
-    public Post(){
+
+    public Post() {
     }
 
     public int getId() {
@@ -99,14 +100,14 @@ public class Post implements Serializable {
         this.text = text;
     }
 
-    public byte[] getPicture() {
+    public String getPicture() {
         return picture;
     }
 
-    public void setPicture(byte[] picture) {
+    public void setPicture(String picture) {
         this.picture = picture;
     }
-    
+
     public Author getAuthor() {
         return author;
     }
@@ -114,7 +115,7 @@ public class Post implements Serializable {
     public void setAuthor(Author author) {
         this.author = author;
     }
-    
+
     public Date getDatePost() {
         return datepost;
     }

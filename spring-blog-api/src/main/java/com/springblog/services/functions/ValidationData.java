@@ -50,14 +50,10 @@ public class ValidationData {
         }
     }
 
-    private void ValidationPicture(byte[] picture) {
-        if (picture != null) {
-            if (picture.length == 0) {
-                list_errors.add("Picture is empty.");
-            }
-        } else {
-            list_errors.add("Picture is empty.");
-        }
+    private void ValidationPicture(String picture) {
+        if (picture == null || picture.equals("")) {
+            this.list_errors.add("Picture is empty.");
+        } 
     }
 
     public List<String> ValidationUser(UserSys usersys) {
